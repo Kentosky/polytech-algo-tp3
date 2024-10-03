@@ -30,9 +30,20 @@ function fact(int $n){
     return $res
 }
 
+echo "\n" ,fact(5);
+
 function diviseurs(int $n){
-    
+    $res = 1;
+    $tab = array();
+    for ($i = 1; $i<$n + 1; $i++){
+        if ($n % $i == 0){
+            $tab[] = $i;
+        }
+    }
+    return $tab;
 }
+
+echo "\n", diviseurs(6)
 
 function date(int $jour, int $mois, int $annee){
 
